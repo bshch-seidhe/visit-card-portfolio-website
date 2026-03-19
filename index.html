@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>root@mosfet-homepage</title>
+  <link rel="stylesheet" href="styles/style.css"/>
+  <style>
+    /* Internal CSS - navigation active state override */
+    nav a.active {
+      color: var(--green-bright);
+      text-shadow: 0 0 12px var(--green-bright);
+      border-bottom: 1px solid var(--green-bright);
+      padding-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Matrix rain canvas (for future implementation) -->
+  <canvas id="matrix-rain"></canvas>
+
+  <div class="terminal-window">
+
+    <!-- Title bar -->
+    <header class="title-bar">
+      <span>>_ root@mosfet-homepage</span>
+      <nav>
+        <a href="home.exe" class="active">./home.exe</a>
+        <a href="my-projects.sys">./my-projects.sys</a>
+        <a href="about.sh">./about.sh</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <main>
+      <section id="hero" class="hero">
+        <h1 class="glitch" data-text="Welocome to Mosfet Homepage">Welocome to Mosfet Homepage</h1>
+        <p class="subtitle">
+          Software Engineering & AI student &bull;
+          Matrix‑style UI concept &bull;
+          Projects + contacts in one place
+        </p>
+      </section>
+
+      <!-- About card -->
+      <section id="about-card" class="card">
+        <h2>About me</h2>
+        <ul class="card-list">
+          <li>I'm a Software Engineering & AI student building small apps and UI experiments.</li>
+          <li>Main stack: <span class="tag">Java</span>, 
+            <span class="tag">Python</span>, 
+            <span class="tag">JavaScript</span>, 
+            <span class="tag">Solidity</span>.
+          </li>
+          <li>This is a Matrix‑style "terminal card" to explore my projects and contacts.</li>
+          <li>Open the About page for full details.</li>
+        </ul>
+
+        <!-- Inline CSS example -->
+        <button id="theme-btn" style="float:right; margin-top:-3.5rem;">Change Theme</button>
+      </section>
+
+      <!-- CTA buttons -->
+      <section class="cta-row">
+        <a href="my-projects.sys" class="cta-btn">Check out my projects</a>
+        <a href="about.sh" class="cta-btn">About me</a>
+      </section>
+
+      <!-- Contacts table -->
+      <section class="contacts-section">
+        <details>
+          <summary>>_ ls ~/contacts</summary>
+          <table class="contacts-table">
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LinkedIn</td>
+                <td><a href="#">linkedin.com/in/mosfet-dev</a></td>
+              </tr>
+              <tr>
+                <td>GitHub</td>
+                <td><a href="#">github.com/mosfet</a></td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td><a href="mailto:mosfet@dev.io">mosfet@dev.io</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
+      </section>
+
+      <!-- Contact form -->
+      <section class="form-section">
+        <details>
+          <summary>>_ ./send-message.sh</summary>
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <label for="name">name:</label>
+            <input type="text" id="name" name="name" placeholder="your_name" required />
+
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" placeholder="you@domain.com" required />
+
+            <label for="msg">message:</label>
+            <textarea id="msg" name="message" rows="4" placeholder="# write your message here..." required></textarea>
+
+            <button type="submit" class="cta-btn" style="width:auto; padding: 0.6rem 2rem;">./send</button>
+          </form>
+        </details>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="#" aria-label="LinkedIn" class="social-icon">
+        <!-- LinkedIn SVG -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="4"/>
+          <line x1="8" y1="11" x2="8" y2="17"/>
+          <line x1="8" y1="7" x2="8" y2="8"/>
+          <path d="M12 17v-4a2 2 0 0 1 4 0v4"/>
+          <line x1="12" y1="11" x2="12" y2="17"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="GitHub" class="social-icon">
+        <!-- GitHub SVG -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+        </svg>
+      </a>
+      <span class="footer-copy">&copy; 2026 mosfet</span>
+    </footer>
+
+  </div>
+  
+</body>
+</html>
