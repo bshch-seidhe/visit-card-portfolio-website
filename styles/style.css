@@ -10,7 +10,7 @@
   --transition:    0.25s ease;
 }
 
-/* Reset & base */
+/* CSS Reset: Set box-sizing and remove default margins/paddings */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -26,7 +26,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Matrix rain canvas */
+/* Matrix rain canvas (for future implementation via JavaScript) */
 #matrix-rain {
   position: fixed;
   top: 0;
@@ -444,7 +444,7 @@ details[open] summary {
   text-shadow: 0 0 6px var(--green-bright);
 }
 
-/* ── About page — 2x2 grid ── */
+/* ── About page with 2x2 grid ── */
 .about-grid {
   display: flex;
   flex-wrap: wrap;
@@ -534,7 +534,7 @@ details[open] summary {
   95%           { transform: none; opacity: 0; }
 }
 
-/* ── Responsive ── */
+/* ── Responsive objects ── */
 @media (max-width: 640px) {
   .title-bar { flex-direction: column; align-items: flex-start; }
   nav { gap: 1rem; flex-wrap: wrap; }
