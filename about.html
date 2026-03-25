@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>root@mosfet-homepage | About</title>
+  <link rel="stylesheet" href="styles/style.css"/>
+  <style>
+    nav a.active {
+      color: var(--green-bright);
+      text-shadow: 0 0 12px var(--green-bright);
+      border-bottom: 1px solid var(--green-bright);
+      padding-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="matrix-rain"></canvas>
+
+  <div class="terminal-window">
+
+    <!-- Title bar -->
+    <header class="title-bar">
+      <span class="prompt">&gt;_ root@mosfet-homepage</span>
+      <nav>
+        <a href="index.html">./home.exe</a>
+        <a href="my-projects.html">./my-projects.sys</a>
+        <a href="about.html" class="active">./about.sh</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <!-- Inline CSS -->
+        <button id="theme-btn" style="float: right; margin-top: -2.5rem;">Change Theme</button>
+
+        <h1 class="glitch" data-text="About">About</h1>
+      </section>
+
+      <!-- 2x2 About grid -->
+      <section class="about-grid">
+
+        <!-- Who I am -->
+        <div class="card about-card">
+          <h2>Who I am</h2>
+          <p>I'm a Software Engineering &amp; AI student who enjoys building small projects and testing ideas through clean UI prototypes. I like "terminal-style" interfaces because they are simple, structured, and focused on clarity.</p>
+        </div>
+
+        <!-- Skills -->
+        <div class="card about-card">
+          <h2>Skills</h2>
+          <p>Soft skills:</p>
+          <ul class="about-list">
+            <li>Fast learner</li>
+            <li>Communicative</li>
+          </ul>
+          <p>Hard skills:</p>
+          <ul class="about-list">
+            <li><span class="tag">Java</span> <span class="tag">Python</span> <span class="tag">JavaScript</span> <span class="tag">Solidity</span></li>
+            <li>Git / GitHub, CLI workflow</li>
+            <li>UI prototype in Figma</li>
+          </ul>
+        </div>
+
+        <!-- Experience -->
+        <div class="card about-card">
+          <h2>Experience</h2>
+          <p>Here you can list your work experience, internships, or any relevant professional background.</p>
+        </div>
+
+        <!-- Contacts -->
+        <div class="card about-card">
+          <h2>Contacts</h2>
+          <ul class="about-list">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- Back to home -->
+      <section class="cta-row">
+        <a href="index.html" class="cta-btn">Home Page</a>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="https://www.linkedin.com/in/bshcherbak" target="_blank" aria-label="LinkedIn" class="social-icon">
+        <img src="images/linkedin-logo.png" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      </a>
+      <a href="https://www.github.com/bshch-seidhe" target="_blank" aria-label="GitHub" class="social-icon">
+        <img src="images/github-logo.png" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      </a>
+      <span class="footer-copy">&copy; 2026 mosfet</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>
