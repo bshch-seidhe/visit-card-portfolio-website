@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>root@mosfet-homepage | Projects</title>
+
+  <!-- SEO meta tags -->
+  <meta name="description" content="Projects by Bohdan Shcherbak – Software Engineering & AI student. UniDAO blockchain voting system built with Solidity and JavaScript. Flappy Bird Unity C# clone." />
+  <meta name="keywords" content="Bohdan Shcherbak projects, UniDAO Solidity blockchain voting, Flappy Bird Unity C# clone, student developer projects, JavaScript Solidity portfolio" />
+  <meta name="author" content="Bohdan Shcherbak" />
+
+  <title>My Projects</title>
   <link rel="stylesheet" href="styles/style.css"/>
   <style>
     nav a.active {
@@ -16,14 +22,14 @@
 </head>
 <body>
 
-  <canvas id="matrix-rain"></canvas>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
 
   <div class="terminal-window">
 
     <!-- Title bar -->
     <header class="title-bar">
       <span class="prompt">&gt;_ root@mosfet-homepage</span>
-      <nav>
+      <nav aria-label="Main navigation">
         <a href="index.html">./home.exe</a>
         <a href="my-projects.html" class="active">./my-projects.sys</a>
         <a href="about.html">./about.md</a>
@@ -41,46 +47,59 @@
       </section>
 
       <!-- Project cards grid -->
-      <section class="projects-grid">
+      <section class="projects-grid" aria-label="Portfolio projects">
 
         <!-- Project card 1 -->
         <article class="project-card">
           <div class="project-preview">
-            <!-- Placeholder for project image -->
             <div class="project-img-placeholder">
-              <span><img src="images/UniDAO.png" alt="UniDAO Project" width="440" height="205"></span>
+              <span>
+                <img
+                  src="images/UniDAO.png"
+                  alt="UniDAO Voting System – a decentralised on-chain governance app built with Solidity and JavaScript"
+                  width="440"
+                  height="205"
+                >
+              </span>
             </div>
           </div>
           <div class="project-info">
             <h3 class="project-title">UniDAO Voting System</h3>
-            <p class="project-desc">Short description of the project and its features.</p>
+            <p class="project-desc">A decentralised autonomous organisation (DAO) voting system built on Ethereum using Solidity smart contracts and a JavaScript frontend.</p>
             <ul class="project-tags">
               <li><span class="tag">Solidity</span></li>
               <li><span class="tag">JavaScript</span></li>
               <li><span class="tag">Blockchain</span></li>
             </ul>
-            <a href="https://github.com/bshch-seidhe/uni-dao" target="_blank" class="project-link">&gt;_ ./github-repo</a>
+            <a href="https://github.com/bshch-seidhe/uni-dao" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View UniDAO Voting System source code on GitHub">&gt;_ ./view-on-github</a>
           </div>
         </article>
 
         <!-- Project card 2 -->
         <article class="project-card">
           <div class="project-preview">
-            <!-- Placeholder for project image -->
             <div class="project-img-placeholder">
-              <span><img src="images/flappy-bird.png" alt="Flappy Bird Project" width="440" height="205"></span>
+              <span>
+                <img
+                  src="images/flappy-bird.png"
+                  alt="Unity Flappy Bird clone – a C# game built in the Unity engine recreating the classic mobile game"
+                  width="440"
+                  height="205"
+                >
+              </span>
             </div>
           </div>
           <div class="project-info">
             <h3 class="project-title">Unity Flappy Bird</h3>
-            <p class="project-desc">Short description of the project and its features.</p>
+            <p class="project-desc">A Flappy Bird clone recreated in Unity using C#, featuring physics-based gameplay, procedurally spawned obstacles, and a score counter.</p>
             <ul class="project-tags">
               <li><span class="tag">Unity</span></li>
               <li><span class="tag">C#</span></li>
             </ul>
-            <a href="https://github.com/bshch-seidhe/flappy-bird-unity-clone" target="_blank" class="project-link">&gt;_ ./github-repo</a>
+            <a href="https://github.com/bshch-seidhe/flappy-bird-unity-clone" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Unity Flappy Bird clone source code on GitHub">&gt;_ ./view-on-github</a>
           </div>
         </article>
+
       </section>
 
       <!-- Back to home -->
@@ -92,13 +111,13 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <a href="https://www.linkedin.com/in/bshcherbak" target="_blank" aria-label="LinkedIn" class="social-icon">
-        <img src="images/linkedin-logo.png" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <a href="https://www.linkedin.com/in/bshcherbak" target="_blank" rel="noopener noreferrer" aria-label="Bohdan Shcherbak on LinkedIn" class="social-icon">
+        <img src="images/linkedin-logo.png" width="22" height="22" alt="LinkedIn">
       </a>
-      <a href="https://www.github.com/bshch-seidhe" target="_blank" aria-label="GitHub" class="social-icon">
-        <img src="images/github-logo.png" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <a href="https://www.github.com/bshch-seidhe" target="_blank" rel="noopener noreferrer" aria-label="Bohdan Shcherbak on GitHub" class="social-icon">
+        <img src="images/github-logo.png" width="22" height="22" alt="GitHub">
       </a>
-      <span class="footer-copy">&copy; 2026 mosfet</span>
+      <span class="footer-copy">&copy; 2026 Bohdan Shcherbak</span>
     </footer>
 
   </div>

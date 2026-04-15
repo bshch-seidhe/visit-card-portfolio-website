@@ -499,6 +499,17 @@ details[open] summary {
   color: var(--green-dim);
 }
 
+.about-list a {
+  color: var(--green-dim);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.about-list a:hover {
+  color: var(--green-bright);
+  text-shadow: 0 0 6px var(--green-bright);
+}
+
 /* ── Footer ── */
 .footer {
   display: flex;
@@ -557,7 +568,7 @@ details[open] summary {
 }
 
 /* ── Responsive objects ── */
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .title-bar { flex-direction: column; align-items: flex-start; }
   nav { gap: 1rem; flex-wrap: wrap; }
   .cta-row { flex-direction: column; align-items: center; }

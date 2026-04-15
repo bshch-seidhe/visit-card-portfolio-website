@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>root@mosfet-homepage</title>
+
+  <!-- SEO meta tags -->
+  <meta name="description" content="Bohdan Shcherbak – Software Engineering and AI student. Portfolio of web development, blockchain, and game projects. Built with JavaScript, Solidity, Java, Python, C#." />
+  <meta name="keywords" content="Bohdan Shcherbak, software engineer, AI student, web developer portfolio, JavaScript developer, Solidity blockchain, Java Python C#, frontend developer Ukraine" />
+  <meta name="author" content="Bohdan Shcherbak" />
+
+  <!-- Open Graph (for social sharing) -->
+  <meta property="og:title" content="Bohdan Shcherbak – Software Engineering & AI Portfolio" />
+  <meta property="og:description" content="Portfolio of Bohdan Shcherbak – Software Engineering & AI student building blockchain apps, games and web interfaces." />
+  <meta property="og:type" content="website" />
+
+  <title>Home</title>
   <link rel="stylesheet" href="styles/style.css"/>
   <style>
     /* Internal CSS - navigation active state override */
@@ -18,14 +29,14 @@
 <body>
 
   <!-- Matrix rain canvas for future implementation via JavaScript -->
-  <canvas id="matrix-rain"></canvas>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
 
   <div class="terminal-window">
 
     <!-- Title bar -->
     <header class="title-bar">
       <span class="prompt">&gt;_ root@mosfet-homepage</span>
-      <nav>
+      <nav aria-label="Main navigation">
         <a href="index.html" class="active">./home.exe</a>
         <a href="my-projects.html">./my-projects.sys</a>
         <a href="about.html">./about.md</a>
@@ -39,12 +50,12 @@
         <!-- Inline CSS -->
         <button id="theme-btn" style="float: right; margin-top: -2.5rem;">Change Theme</button>
         
-        <h1 class="glitch" data-text="Welcome to Mosfet Homepage">Welcome to Mosfet Homepage</h1>
-        <p id="subtext">Hi, I'm <strong>Bohdan Shcherbak</strong>, this is my visit card, where you can discover my work</p>
+        <h1 class="glitch" data-text="Bohdan Shcherbak – Software Engineering & AI">Bohdan Shcherbak – Software Engineering &amp; AI</h1>
+        <p id="subtext">Hi, I'm <strong>Bohdan Shcherbak</strong>, a Software Engineering &amp; AI student — this is my portfolio where you can discover my work</p>
         <p class="subtitle">
           Software Engineering &amp; AI student &bull;
-          Matrix-style UI concept &bull;
-          Projects + contacts in one place
+          Blockchain, web &amp; game projects &bull;
+          JavaScript &bull; Solidity &bull; Java &bull; Python
         </p>
       </section>
 
@@ -59,10 +70,9 @@
             <span class="tag">JavaScript</span>
             <span class="tag">Solidity</span>
           </li>
-          <li>This is a Matrix-style "terminal card" to explore my projects and contacts.</li>
+          <li>This is a Matrix-style "terminal card" — explore my projects and contacts below.</li>
           <li>Open the About page for full details.</li>
         </ul>
-
       </section>
 
       <!-- CTA buttons -->
@@ -72,24 +82,24 @@
       </section>
 
       <!-- Contacts table -->
-      <section class="contacts-section">
+      <section class="contacts-section" aria-label="Contact links">
         <details>
           <summary>&gt;_ ls ~/contacts</summary>
           <table class="contacts-table">
             <thead>
               <tr>
-                <th>Platform</th>
-                <th>Link</th>
+                <th scope="col">Platform</th>
+                <th scope="col">Link</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>LinkedIn</td>
-                <td><a href="https://www.linkedin.com/in/bshcherbak" target="_blank">linkedin.com/in/bshcherbak</a></td>
+                <td><a href="https://www.linkedin.com/in/bshcherbak" target="_blank" rel="noopener noreferrer">linkedin.com/in/bshcherbak</a></td>
               </tr>
               <tr>
                 <td>GitHub</td>
-                <td><a href="https://www.github.com/bshch-seidhe" target="_blank">github.com/bshch-seidhe</a></td>
+                <td><a href="https://www.github.com/bshch-seidhe" target="_blank" rel="noopener noreferrer">github.com/bshch-seidhe</a></td>
               </tr>
               <tr>
                 <td>Email</td>
@@ -101,15 +111,15 @@
       </section>
 
       <!-- Contact form -->
-      <section class="form-section">
+      <section class="form-section" aria-label="Contact form">
         <details>
           <summary>&gt;_ ./send-message.sh</summary>
-          <form class="contact-form">
+          <form class="contact-form" aria-label="Send a message to Bohdan Shcherbak">
             <label for="name">name:</label>
-            <input type="text" id="name" name="name" placeholder="your_name" required />
+            <input type="text" id="name" name="name" placeholder="your_name" required autocomplete="name" />
 
             <label for="email">email:</label>
-            <input type="email" id="email" name="email" placeholder="you@domain.com" required />
+            <input type="email" id="email" name="email" placeholder="you@domain.com" required autocomplete="email" />
 
             <label for="msg">message:</label>
             <textarea id="msg" name="message" rows="4" placeholder="# write your message here..." required></textarea>
@@ -123,13 +133,13 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <a href="https://www.linkedin.com/in/bshcherbak" target="_blank" aria-label="LinkedIn" class="social-icon">
-        <img src="images/linkedin-logo.png" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <a href="https://www.linkedin.com/in/bshcherbak" target="_blank" rel="noopener noreferrer" aria-label="Bohdan Shcherbak on LinkedIn" class="social-icon">
+        <img src="images/linkedin-logo.png" width="22" height="22" alt="LinkedIn">
       </a>
-      <a href="https://www.github.com/bshch-seidhe" target="_blank" aria-label="GitHub" class="social-icon">
-        <img src="images/github-logo.png" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <a href="https://www.github.com/bshch-seidhe" target="_blank" rel="noopener noreferrer" aria-label="Bohdan Shcherbak on GitHub" class="social-icon">
+        <img src="images/github-logo.png" width="22" height="22" alt="GitHub">
       </a>
-      <span class="footer-copy">&copy; 2026 mosfet</span>
+      <span class="footer-copy">&copy; 2026 Bohdan Shcherbak</span>
     </footer>
 
   </div>

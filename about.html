@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>root@mosfet-homepage | About</title>
+
+  <!-- SEO meta tags -->
+  <meta name="description" content="About Bohdan Shcherbak – Software Engineering & AI student. Skills in JavaScript, Java, Python, Solidity, Git, Figma. Fast learner, communicative, open to opportunities." />
+  <meta name="keywords" content="Bohdan Shcherbak about, software engineering student, AI student Ukraine, JavaScript Java Python Solidity skills, Figma UI, blockchain developer student" />
+  <meta name="author" content="Bohdan Shcherbak" />
+
+  <title>About</title>
   <link rel="stylesheet" href="styles/style.css"/>
   <style>
     nav a.active {
@@ -16,14 +22,14 @@
 </head>
 <body>
 
-  <canvas id="matrix-rain"></canvas>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
 
   <div class="terminal-window">
 
     <!-- Title bar -->
     <header class="title-bar">
       <span class="prompt">&gt;_ root@mosfet-homepage</span>
-      <nav>
+      <nav aria-label="Main navigation">
         <a href="index.html">./home.exe</a>
         <a href="my-projects.html">./my-projects.sys</a>
         <a href="about.html" class="active">./about.md</a>
@@ -37,16 +43,16 @@
         <!-- Inline CSS -->
         <button id="theme-btn" style="float: right; margin-top: -2.5rem;">Change Theme</button>
 
-        <h1 class="glitch" data-text="About">About</h1>
+        <h1 class="glitch" data-text="About Bohdan Shcherbak">About Bohdan Shcherbak</h1>
       </section>
 
       <!-- 2x2 About grid -->
-      <section class="about-grid">
+      <section class="about-grid" aria-label="About information">
 
         <!-- Who I am -->
         <div class="card about-card">
           <h2>Who I am</h2>
-          <p>I'm a Software Engineering &amp; AI student who enjoys building small projects and testing ideas through clean UI prototypes. I like "terminal-style" interfaces because they are simple, structured, and focused on clarity.</p>
+          <p>I'm <strong>Bohdan Shcherbak</strong>, a Software Engineering &amp; AI student who enjoys building small projects and testing ideas through clean UI prototypes. I like "terminal-style" interfaces because they are simple, structured, and focused on clarity.</p>
         </div>
 
         <!-- Skills -->
@@ -59,29 +65,37 @@
           </ul>
           <p>Hard skills:</p>
           <ul class="about-list">
-            <li><span class="tag">Java</span> 
-                <span class="tag">Python</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Solidity</span>
+            <li>
+              <span class="tag">Java</span>
+              <span class="tag">Python</span>
+              <span class="tag">C#</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Solidity</span>
             </li>
             <li>Git / GitHub, CLI workflow</li>
-            <li>UI prototype in Figma</li>
+            <li>UI prototyping in Figma</li>
           </ul>
         </div>
 
         <!-- Experience -->
         <div class="card about-card">
           <h2>Experience</h2>
-          <p>Here you will see my work experience, internships and other relevant professional background.</p>
+          <p>Here you will see my work experience, internships, and other relevant professional background as a Software Engineering &amp; AI student.</p>
         </div>
 
         <!-- Contacts -->
         <div class="card about-card">
           <h2>Contacts</h2>
           <ul class="about-list">
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <p>LinkedIn: <a href="https://www.linkedin.com/in/bshcherbak" target="_blank" rel="noopener noreferrer" aria-label="Bohdan Shcherbak on LinkedIn">linkedin.com/in/bshcherbak</a></p>
+            </li>
+            <li>
+              <p>GitHub: <a href="https://www.github.com/bshch-seidhe" target="_blank" rel="noopener noreferrer" aria-label="Bohdan Shcherbak on GitHub">github.com/bshch-seidhe</a></p>
+            </li>
+            <li>
+              <p>Email: <a href="mailto:b.shcherbak@gmail.com" aria-label="Email Bohdan Shcherbak">b.shcherbak@gmail.com</a></p>
+            </li>
           </ul>
         </div>
 
@@ -96,13 +110,13 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <a href="https://www.linkedin.com/in/bshcherbak" target="_blank" aria-label="LinkedIn" class="social-icon">
-        <img src="images/linkedin-logo.png" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <a href="https://www.linkedin.com/in/bshcherbak" target="_blank" rel="noopener noreferrer" aria-label="Bohdan Shcherbak on LinkedIn" class="social-icon">
+        <img src="images/linkedin-logo.png" width="22" height="22" alt="LinkedIn">
       </a>
-      <a href="https://www.github.com/bshch-seidhe" target="_blank" aria-label="GitHub" class="social-icon">
-        <img src="images/github-logo.png" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <a href="https://www.github.com/bshch-seidhe" target="_blank" rel="noopener noreferrer" aria-label="Bohdan Shcherbak on GitHub" class="social-icon">
+        <img src="images/github-logo.png" width="22" height="22" alt="GitHub">
       </a>
-      <span class="footer-copy">&copy; 2026 mosfet</span>
+      <span class="footer-copy">&copy; 2026 Bohdan Shcherbak</span>
     </footer>
 
   </div>
