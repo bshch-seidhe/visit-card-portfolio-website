@@ -539,6 +539,27 @@ details[open] summary {
   margin-left: auto;
 }
 
+/* ── Themes ── */
+body.theme-amber {
+  --green-bright: #ffb300;
+  --green-mid:    #cc8800;
+  --green-dim:    #996600;
+  --green-glow:   rgba(255, 179, 0, 0.18);
+  --bg:           #0d0900;
+  --card-bg:      rgba(20, 12, 0, 0.85);
+  --border:       rgba(255, 179, 0, 0.35);
+}
+
+body.theme-cyan {
+  --green-bright: #00e5ff;
+  --green-mid:    #00b8cc;
+  --green-dim:    #007a88;
+  --green-glow:   rgba(0, 229, 255, 0.18);
+  --bg:           #000d0f;
+  --card-bg:      rgba(0, 15, 20, 0.85);
+  --border:       rgba(0, 229, 255, 0.35);
+}
+
 /* ── Keyframe animations ── */
 @keyframes flicker {
   0%, 95%, 100% { opacity: 1; }
