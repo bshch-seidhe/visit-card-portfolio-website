@@ -54,3 +54,19 @@ document.getElementById('theme-btn').addEventListener('click', () => {
     document.body.classList.add(themes[themeIndex]);
   }
 });
+
+// Form Handler
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  const original = btn.textContent;
+  btn.textContent = './message_sent.sh ✓';
+  btn.style.borderColor = 'var(--green-bright)';
+  btn.style.boxShadow = '0 0 12px var(--green-glow)';
+  setTimeout(() => {
+    btn.textContent = original;
+    btn.style.borderColor = '';
+    btn.style.boxShadow = '';
+    e.target.reset();
+  }, 2500);
+}
