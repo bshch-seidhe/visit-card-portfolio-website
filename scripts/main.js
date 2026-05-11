@@ -22,7 +22,7 @@ function drawRain() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Use current theme colour
+  // Use current theme color
   const style = getComputedStyle(document.documentElement);
   ctx.fillStyle = style.getPropertyValue('--green-bright').trim() || '#00ff41';
 
@@ -46,34 +46,38 @@ setInterval(drawRain, 50);
 const themes = ['', 'theme-amber', 'theme-cyan'];
 let themeIndex = 0;
 
-document.getElementById('theme-btn').addEventListener('click', () => {
-  // Remove current theme class
-  document.body.classList.remove(...themes.filter(Boolean));
-  themeIndex = (themeIndex + 1) % themes.length;
-  if (themes[themeIndex]) {
-    document.body.classList.add(themes[themeIndex]);
-  }
-  console.log("[theme] Switched to: ", themes[themeIndex] || "default (green)");
-});
+const themeBtn = document.getElementById('theme-btn');
+if (themeBtn) {
+  themeBtn.addEventListener('click', () => {
+    // Remove current theme class
+    document.body.classList.remove(...themes.filter(Boolean));
+    themeIndex = (themeIndex + 1) % themes.length;
+    if (themes[themeIndex]) {
+      document.body.classList.add(themes[themeIndex]);
+    }
+    console.log('[theme] Switched to:', themes[themeIndex] || 'default (green)');
+  });
+}
 
 // Form Handler
 function handleSubmit(e) {
   e.preventDefault();
-  console.log("[form] Message submitted by: ", e.target.name?.value);
-  const btn = e.target.querySelector('button[type="submit"]');
-  const original = btn.textContent;
-  btn.textContent = './message_sent.sh ✓';
-  btn.style.borderColor = 'var(--green-bright)';
-  btn.style.boxShadow = '0 0 12px var(--green-glow)';
-  setTimeout(() => {
-    btn.textContent = original;
-    btn.style.borderColor = '';
-    btn.style.boxShadow = '';
-    e.target.reset();
-  }, 2500);
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('msg').value.trim();
+
+  console.log('[form] Submission received:');
+  console.log('  name:   ', name);
+  console.log('  email:  ', email);
+  console.log('  message:', message);
+
+  const popup = document.getElementById('form-popup');
+  popup.classList.add('show');
+  setTimeout(() => popup.classList.remove('show'), 3000);
+  e.target.reset();
 }
 
-const contactForm = document.getElementById('contactForm');
+const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', handleSubmit);
   console.log("[form] Contact from listener attached");

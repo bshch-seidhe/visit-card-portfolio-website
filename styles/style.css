@@ -265,10 +265,6 @@ nav a.active {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   padding: 0.4rem 0.9rem;
-  margin-top: -2.5rem;
-  margin-right: -1rem;
-  display: flex;
-  align-self: flex-end;
   cursor: pointer;
   letter-spacing: 0.06em;
   transition: all var(--transition);
@@ -407,6 +403,30 @@ details[open] summary {
 .contact-form textarea::placeholder {
   color: var(--green-dim);
   opacity: 0.6;
+}
+
+/* ── Success popup ── */
+.popup {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(0, 20, 8, 0.95);
+  border: 1px solid var(--green-bright);
+  color: var(--green-bright);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0.9rem 1.4rem;
+  box-shadow: 0 0 20px var(--green-glow);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ── Projects page ── */
