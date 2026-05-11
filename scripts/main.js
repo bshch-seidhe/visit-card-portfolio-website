@@ -14,6 +14,7 @@ function initRain() {
   cols  = Math.floor(canvas.width / fontSize);
   drops = Array(cols).fill(1);
   ctx.font = `${fontSize}px monospace`;
+  console.log("[matrix] Rain initialized – cols:", cols);
 }
 
 function drawRain() {
@@ -38,9 +39,8 @@ function drawRain() {
 }
 
 initRain();
-window.addEventListener('resize', initRain);
+window.addEventListener('resize', () => { initRain(); console.log("[matrix] Reinitialized on resize") });
 setInterval(drawRain, 50);
-
 
 // Theme switcher
 const themes = ['', 'theme-amber', 'theme-cyan'];
@@ -53,11 +53,13 @@ document.getElementById('theme-btn').addEventListener('click', () => {
   if (themes[themeIndex]) {
     document.body.classList.add(themes[themeIndex]);
   }
+  console.log("[theme] Switched to: ", themes[themeIndex] || "default (green)");
 });
 
 // Form Handler
 function handleSubmit(e) {
   e.preventDefault();
+  console.log("[form] Message submitted by: ", e.target.name?.value);
   const btn = e.target.querySelector('button[type="submit"]');
   const original = btn.textContent;
   btn.textContent = './message_sent.sh ✓';
@@ -69,4 +71,23 @@ function handleSubmit(e) {
     btn.style.boxShadow = '';
     e.target.reset();
   }, 2500);
+}
+
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', handleSubmit);
+  console.log("[form] Contact from listener attached");
+}
+
+// Hamburger menu
+const navToggle = document.getElementById('nav-toggle');
+const mainNav = document.getElementById('main-nav');
+
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+    console.log('[nav] Menu', isOpen ? 'opened' : 'closed');
+  });
 }

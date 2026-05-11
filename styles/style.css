@@ -26,7 +26,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Matrix rain canvas (for future implementation via JavaScript) */
+/* Matrix rain canvas */
 #matrix-rain {
   position: fixed;
   top: 0;
@@ -91,12 +91,41 @@ nav a:hover {
 nav a.active {
   color: var(--green-bright);
   text-shadow: 0 0 12px var(--green-bright);
-  border-bottom: 1px solid var(--green-bright);
   padding-bottom: 2px;
 }
 
+/* ── Hamburger button (hidden on desktop) ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: transparent;
+  border: 1px solid var(--green-dim);
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--green-bright);
+  transition: all var(--transition);
+}
+
+/* Animate to X when open */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+
 /* ── Hero ── */
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 3.5rem 2rem 2rem;
   text-align: center;
 }
@@ -239,7 +268,7 @@ nav a.active {
   margin-top: -2.5rem;
   margin-right: -1rem;
   display: flex;
-  float: right;
+  align-self: flex-end;
   cursor: pointer;
   letter-spacing: 0.06em;
   transition: all var(--transition);
@@ -601,8 +630,32 @@ body.theme-cyan {
 
 /* ── Responsive objects ── */
 @media (max-width: 480px) {
-  .title-bar { flex-direction: column; align-items: flex-start; }
-  nav { gap: 1rem; flex-wrap: wrap; }
+  .title-bar {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+  }
+
+  .hamburger { display: flex; }
+
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--border);
+    margin-top: 0.5rem;
+  }
+
+  nav.open { display: flex; }
+
+  nav a {
+    padding: 0.65rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+
+  nav a:last-child { border-bottom: none; }
   .cta-row { flex-direction: column; align-items: center; }
   .cta-btn { min-width: 90%; }
   #theme-btn { float: none !important; margin-top: 1rem !important; }
