@@ -15,7 +15,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="matrix-logo.png" />
 
-  <title>Home</title>
+  <title>Home | Bohdan Shcherbak</title>
 
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -24,19 +24,10 @@
   <link rel="manifest" href="favicons/site.webmanifest">
   
   <link rel="stylesheet" href="styles/style.css"/>
-  <style>
-    /* Internal CSS - navigation active state override */
-    nav a.active {
-      color: var(--green-bright);
-      text-shadow: 0 0 12px var(--green-bright);
-      border-bottom: 1px solid var(--green-bright);
-      padding-bottom: 2px;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Matrix rain canvas for future implementation via JavaScript -->
+  <!-- Matrix rain canvas -->
   <canvas id="matrix-rain" aria-hidden="true"></canvas>
 
   <div class="terminal-window">
@@ -55,8 +46,8 @@
 
       <!-- Hero -->
       <section id="hero" class="hero">
-        <!-- Inline CSS -->
-        <button id="theme-btn" style="float: right; margin-top: -2.5rem;">Change Theme</button>
+
+        <button id="theme-btn">Change Theme</button>
         
         <h1 class="glitch" data-text="Bohdan Shcherbak – Software Engineering & AI">Bohdan Shcherbak – Software Engineering &amp; AI</h1>
         <p id="subtext">Hi, I'm <strong>Bohdan Shcherbak</strong>, a Software Engineering &amp; AI student — this is my portfolio where you can discover my work</p>
