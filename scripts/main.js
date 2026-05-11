@@ -46,6 +46,14 @@ setInterval(drawRain, 50);
 const themes = ['', 'theme-amber', 'theme-cyan'];
 let themeIndex = 0;
 
+// On page load, restore saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  themeIndex = themes.indexOf(savedTheme);
+  if (themeIndex === -1) themeIndex = 0; // fallback if value is corrupted
+  document.body.classList.add(savedTheme);
+}
+
 const themeBtn = document.getElementById('theme-btn');
 if (themeBtn) {
   themeBtn.addEventListener('click', () => {
@@ -54,6 +62,9 @@ if (themeBtn) {
     themeIndex = (themeIndex + 1) % themes.length;
     if (themes[themeIndex]) {
       document.body.classList.add(themes[themeIndex]);
+      localStorage.setItem('theme', themes[themeIndex]);
+    } else {
+      localStorage.removeItem('theme'); // back to default, clear storage
     }
     console.log('[theme] Switched to:', themes[themeIndex] || 'default (green)');
   });
