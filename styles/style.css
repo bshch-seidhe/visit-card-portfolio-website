@@ -257,6 +257,13 @@ nav a.active {
   background: rgba(0,255,65,0.06);
 }
 
+/* ── Typewriter blinking cursor ── */
+.tw-cursor {
+  display: inline-block;
+  color: var(--green-bright);
+  animation: blink-cursor 0.7s step-end infinite;
+}
+
 /* ── Theme button ── */
 #theme-btn {
   background: transparent;
@@ -307,6 +314,12 @@ nav a.active {
   border-color: var(--green-bright);
   box-shadow: 0 0 16px var(--green-glow), inset 0 0 16px var(--green-glow);
   text-shadow: 0 0 8px var(--green-bright);
+}
+
+/* ── Submit button size modifier ── */
+.cta-btn.cta-btn--submit {
+  width: auto;
+  padding: 0.6rem 2rem;
 }
 
 /* ── Contacts table ── */
@@ -619,6 +632,11 @@ body.theme-cyan {
   97%           { opacity: 1; }
   98%           { opacity: 0.7; }
   99%           { opacity: 1; }
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
 }
 
 @keyframes glitch-top {
